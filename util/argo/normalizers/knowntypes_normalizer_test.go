@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/argoproj/argo-cd/errors"
 	"github.com/argoproj/argo-cd/pkg/apis/application/v1alpha1"
 
+	"github.com/argoproj/pkg/errors"
 	"github.com/ghodss/yaml"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
