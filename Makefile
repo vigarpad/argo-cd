@@ -231,6 +231,10 @@ image:
 endif
 	@if [ "$(DOCKER_PUSH)" = "true" ] ; then docker push $(IMAGE_PREFIX)argocd:$(IMAGE_TAG) ; fi
 
+.PHONY: armimage
+armimage:
+	docker build -t $(IMAGE_PREFIX)argocd:arm-$(IMAGE_TAG) . --build-arg BUILD_DARWIN_CLI="false" --build-arg BUILD_WINDOWS_CLI="false"
+
 .PHONY: builder-image
 builder-image:
 	docker build  -t $(IMAGE_PREFIX)argo-cd-ci-builder:$(IMAGE_TAG) --target builder .
