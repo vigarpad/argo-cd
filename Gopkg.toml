@@ -128,3 +128,9 @@ required = [
 [[constraint]]
   name = "github.com/bsm/redislock"
   version = "0.4.3"
+
+# Required for the fix https://github.com/google/go-jsonnet/issues/376 to be included
+# TODO: Remove once a new release of the package is out.
+[[constraint]]
+  name = "github.com/google/go-jsonnet"
+  revision = "8a0084e643955269558e206eb9f4d90e2e569781"
